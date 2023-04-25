@@ -40,7 +40,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def process_image():
+    print("0")
     try:
+        print("1")
         encoded_string = request.form['encoded_string']
         print(encoded_string)
         # Decode the base64-encoded string to bytes
