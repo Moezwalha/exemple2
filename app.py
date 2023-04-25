@@ -44,10 +44,11 @@ def process_image():
     try:
         print("1")
         encoded_string = request.form['encoded_string']
+        print("2")
         print(encoded_string)
         # Decode the base64-encoded string to bytes
         image_bytes = base64.b64decode(encoded_string)
-        print(image_bytes)
+        print("3")
         # Convert the image bytes to a numpy array
         nparr = np.fromstring(image_bytes, np.uint8)
         # Decode the numpy array to an image using OpenCV
