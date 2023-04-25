@@ -42,9 +42,10 @@ app = Flask(__name__)
 def process_image():
     try:
         encoded_string = request.form['encoded_string']
+        print(encoded_string)
         # Decode the base64-encoded string to bytes
         image_bytes = base64.b64decode(encoded_string)
-        
+        print(image_bytes)
         # Convert the image bytes to a numpy array
         nparr = np.fromstring(image_bytes, np.uint8)
         # Decode the numpy array to an image using OpenCV
