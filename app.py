@@ -61,8 +61,8 @@ def process_image():
                 prediction = model_test(img_tensor[None].to("cpu"))            
                 # Get the predicted label
                 pred_label = classes[torch.max(prediction, dim=1)[1]]
-
-        return pred_label
+                return pred_label
+           
     except Exception as e:
         return f'Error: {str(e)}'
     
