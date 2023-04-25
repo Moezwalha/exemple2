@@ -1,0 +1,6 @@
+gunicorn
+Flask
+numpy
+opencv-python
+torchvision
+mediapipe
